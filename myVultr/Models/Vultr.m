@@ -21,9 +21,7 @@
 
 +(void) accountInfo:(NSString*) apiKey success:(void (^)(AccountInfo* accountInfo))success failure: (void (^)()) failure {
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-        [manager GET:@"https://api.vultr.com/v1/account/info" parameters:@{@"api_key" : apiKey} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSLog(@"%@", responseObject);
-            
+        [manager GET:@"https://api.vultr.com/v1/account/info" parameters:@{@"api_key" : apiKey} success:^(AFHTTPRequestOperation *operation, id responseObject) {            
             AccountInfo* accountInfo = [[AccountInfo alloc] init];
             
             accountInfo.balance = [NSString stringWithFormat:@"%@", responseObject[@"balance"]];
