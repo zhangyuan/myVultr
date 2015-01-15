@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:myVultr/Controllers/AccountTableViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:myVultr/Controllers/AccountTableViewController.m">
+   </FileRef>
+   <FileRef
       location = "group:myVultr.xcodeproj">
    </FileRef>
    <FileRef
