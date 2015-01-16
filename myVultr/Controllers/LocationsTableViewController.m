@@ -14,7 +14,7 @@
 -(void) viewDidLoad {
     [super viewDidLoad];
     
-
+    [self reloadRegions];
 }
 
 -(void) reloadRegions {
