@@ -15,6 +15,8 @@
 		2702A3521A66C3D200F36A85 /* myVultrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2702A3511A66C3D200F36A85 /* myVultrTests.m */; };
 		27392EDA1A67ED77000FE533 /* vultr.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27392ED91A67ED77000FE533 /* vultr.plist */; };
 		27392EDC1A67F173000FE533 /* Vultr.m in Sources */ = {isa = PBXBuildFile; fileRef = 27392EDB1A67F173000FE533 /* Vultr.m */; };
+		2794D24E1A6944AD008AFB5B /* CreateServerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2794D24D1A6944AD008AFB5B /* CreateServerTableViewController.m */; };
+		2794D2511A69454A008AFB5B /* LocationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2794D2501A69454A008AFB5B /* LocationsTableViewController.m */; };
 		27E556D11A67F6F000B504B2 /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E556D01A67F6F000B504B2 /* AccountInfo.m */; };
 		27E556D61A67F8C800B504B2 /* AccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E556D51A67F8C800B504B2 /* AccountTableViewController.m */; };
 		3053362ADB7A5261B8688668 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01865DD458A1EDDEF0A730A4 /* libPods.a */; };
@@ -46,6 +48,10 @@
 		27392ED91A67ED77000FE533 /* vultr.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = vultr.plist; sourceTree = "<group>"; };
 		27392EDB1A67F173000FE533 /* Vultr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vultr.m; sourceTree = "<group>"; };
 		27392EE01A67F1F7000FE533 /* Vultr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vultr.h; sourceTree = "<group>"; };
+		2794D24C1A6944AD008AFB5B /* CreateServerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateServerTableViewController.h; path = Controllers/CreateServerTableViewController.h; sourceTree = "<group>"; };
+		2794D24D1A6944AD008AFB5B /* CreateServerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateServerTableViewController.m; path = Controllers/CreateServerTableViewController.m; sourceTree = "<group>"; };
+		2794D24F1A69454A008AFB5B /* LocationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationsTableViewController.h; path = Controllers/LocationsTableViewController.h; sourceTree = "<group>"; };
+		2794D2501A69454A008AFB5B /* LocationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationsTableViewController.m; path = Controllers/LocationsTableViewController.m; sourceTree = "<group>"; };
 		27E556D01A67F6F000B504B2 /* AccountInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountInfo.m; sourceTree = "<group>"; };
 		27E556D21A67F74000B504B2 /* AccountInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountInfo.h; sourceTree = "<group>"; };
 		27E556D41A67F8C800B504B2 /* AccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountTableViewController.h; path = Controllers/AccountTableViewController.h; sourceTree = "<group>"; };
@@ -151,6 +157,10 @@
 			children = (
 				27E556D41A67F8C800B504B2 /* AccountTableViewController.h */,
 				27E556D51A67F8C800B504B2 /* AccountTableViewController.m */,
+				2794D24C1A6944AD008AFB5B /* CreateServerTableViewController.h */,
+				2794D24D1A6944AD008AFB5B /* CreateServerTableViewController.m */,
+				2794D24F1A69454A008AFB5B /* LocationsTableViewController.h */,
+				2794D2501A69454A008AFB5B /* LocationsTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -312,6 +322,8 @@
 				27E556D11A67F6F000B504B2 /* AccountInfo.m in Sources */,
 				2702A3381A66C3D200F36A85 /* AppDelegate.m in Sources */,
 				27E556D61A67F8C800B504B2 /* AccountTableViewController.m in Sources */,
+				2794D24E1A6944AD008AFB5B /* CreateServerTableViewController.m in Sources */,
+				2794D2511A69454A008AFB5B /* LocationsTableViewController.m in Sources */,
 				2702A3351A66C3D200F36A85 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,11 @@
 #import "AFNetworking.h"
 #include "Vultr.h"
 
+@implementation Region
+
+@end
+
+
 @implementation Vultr
 
 +(NSString*) defaultApiKey {
@@ -34,6 +39,32 @@
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"Error: %@", error);
         }];
+}
+
++(void) regions:(NSString*) apiKey success:(void (^)(NSArray* regions))success failure: (void (^)()) failure {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"https://api.vultr.com/v1/regions/list" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        id objects = [responseObject allValues];
+        
+        NSMutableArray* regions = [NSMutableArray arrayWithCapacity: [objects count]];
+        
+        for (int i = 0; i < [objects count]; i++) {
+            id regionObject = objects[i];
+            
+            Region* region = [[Region alloc] init];
+            region.dcid = regionObject[@"DCID"];
+            region.name = regionObject[@"name"];
+            region.country = regionObject[@"country"];
+            region.continent = regionObject[@"continent"];
+            region.state = regionObject[@"state"];
+            
+            [regions addObject:region];
+        }
+        
+        success(regions);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 @end
