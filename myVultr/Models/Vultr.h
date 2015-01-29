@@ -10,12 +10,14 @@
 #define myVultr_Vultr_h
 
 #import "AccountInfo.h"
+#import "Server.h"
 
 @interface Vultr : NSObject
 
 +(NSString*) defaultApiKey;
 +(void) accountInfo:(NSString*) apiKey success:(void (^)(AccountInfo* accountInfo))success failure: (void (^)()) failure;
 +(void) regions:(NSString*) apiKey success:(void (^)(NSArray* regions))success failure: (void (^)()) failure;
++(void) servers:(NSString*) apiKey success:(void (^)(NSArray* servers))success failure: (void (^)()) failure;
 @end
 
 @interface Region : NSObject

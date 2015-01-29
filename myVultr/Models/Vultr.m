@@ -41,6 +41,32 @@
         }];
 }
 
++(void) servers:(NSString*) apiKey success:(void (^)(NSArray* servers))success failure: (void (^)()) failure {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"https://api.vultr.com/v1/server/list" parameters:@{@"api_key" : apiKey} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        id objects = [responseObject allValues];
+        
+        NSMutableArray* servers = [NSMutableArray arrayWithCapacity: [objects count]];
+        
+        for (int i = 0; i < [objects count]; i++) {
+            id serverObject = objects[i];
+            
+            Server* server = [[Server alloc] init];
+            server.mainIp = serverObject[@"main_ip"];
+            server.os = serverObject[@"os"];
+            server.location = serverObject[@"location"];
+            server.status = serverObject[@"status"];
+            [servers addObject:server];
+        }
+              
+        success(servers);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+
+}
+
 +(void) regions:(NSString*) apiKey success:(void (^)(NSArray* regions))success failure: (void (^)()) failure {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:@"https://api.vultr.com/v1/regions/list" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {

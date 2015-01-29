@@ -15,6 +15,8 @@
 		2702A3521A66C3D200F36A85 /* myVultrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2702A3511A66C3D200F36A85 /* myVultrTests.m */; };
 		27392EDA1A67ED77000FE533 /* vultr.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27392ED91A67ED77000FE533 /* vultr.plist */; };
 		27392EDC1A67F173000FE533 /* Vultr.m in Sources */ = {isa = PBXBuildFile; fileRef = 27392EDB1A67F173000FE533 /* Vultr.m */; };
+		2754070A1A7A811A00EED5FD /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 275407091A7A811A00EED5FD /* Server.m */; };
+		2754070E1A7A82CF00EED5FD /* ServersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2754070D1A7A82CF00EED5FD /* ServersTableViewController.m */; };
 		2794D24E1A6944AD008AFB5B /* CreateServerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2794D24D1A6944AD008AFB5B /* CreateServerTableViewController.m */; };
 		2794D2511A69454A008AFB5B /* LocationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2794D2501A69454A008AFB5B /* LocationsTableViewController.m */; };
 		27E556D11A67F6F000B504B2 /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E556D01A67F6F000B504B2 /* AccountInfo.m */; };
@@ -48,6 +50,10 @@
 		27392ED91A67ED77000FE533 /* vultr.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = vultr.plist; sourceTree = "<group>"; };
 		27392EDB1A67F173000FE533 /* Vultr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vultr.m; sourceTree = "<group>"; };
 		27392EE01A67F1F7000FE533 /* Vultr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vultr.h; sourceTree = "<group>"; };
+		275407091A7A811A00EED5FD /* Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Server.m; sourceTree = "<group>"; };
+		2754070B1A7A812A00EED5FD /* Server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		2754070C1A7A82CF00EED5FD /* ServersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServersTableViewController.h; path = Controllers/ServersTableViewController.h; sourceTree = "<group>"; };
+		2754070D1A7A82CF00EED5FD /* ServersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServersTableViewController.m; path = Controllers/ServersTableViewController.m; sourceTree = "<group>"; };
 		2794D24C1A6944AD008AFB5B /* CreateServerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateServerTableViewController.h; path = Controllers/CreateServerTableViewController.h; sourceTree = "<group>"; };
 		2794D24D1A6944AD008AFB5B /* CreateServerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateServerTableViewController.m; path = Controllers/CreateServerTableViewController.m; sourceTree = "<group>"; };
 		2794D24F1A69454A008AFB5B /* LocationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationsTableViewController.h; path = Controllers/LocationsTableViewController.h; sourceTree = "<group>"; };
@@ -148,6 +154,8 @@
 				27392EE01A67F1F7000FE533 /* Vultr.h */,
 				27E556D01A67F6F000B504B2 /* AccountInfo.m */,
 				27E556D21A67F74000B504B2 /* AccountInfo.h */,
+				275407091A7A811A00EED5FD /* Server.m */,
+				2754070B1A7A812A00EED5FD /* Server.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,6 +169,8 @@
 				2794D24D1A6944AD008AFB5B /* CreateServerTableViewController.m */,
 				2794D24F1A69454A008AFB5B /* LocationsTableViewController.h */,
 				2794D2501A69454A008AFB5B /* LocationsTableViewController.m */,
+				2754070C1A7A82CF00EED5FD /* ServersTableViewController.h */,
+				2754070D1A7A82CF00EED5FD /* ServersTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -320,6 +330,8 @@
 			files = (
 				27392EDC1A67F173000FE533 /* Vultr.m in Sources */,
 				27E556D11A67F6F000B504B2 /* AccountInfo.m in Sources */,
+				2754070E1A7A82CF00EED5FD /* ServersTableViewController.m in Sources */,
+				2754070A1A7A811A00EED5FD /* Server.m in Sources */,
 				2702A3381A66C3D200F36A85 /* AppDelegate.m in Sources */,
 				27E556D61A67F8C800B504B2 /* AccountTableViewController.m in Sources */,
 				2794D24E1A6944AD008AFB5B /* CreateServerTableViewController.m in Sources */,
