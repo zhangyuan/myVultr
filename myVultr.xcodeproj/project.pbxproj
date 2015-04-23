@@ -21,6 +21,8 @@
 		2794D2511A69454A008AFB5B /* LocationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2794D2501A69454A008AFB5B /* LocationsTableViewController.m */; };
 		27E556D11A67F6F000B504B2 /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E556D01A67F6F000B504B2 /* AccountInfo.m */; };
 		27E556D61A67F8C800B504B2 /* AccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E556D51A67F8C800B504B2 /* AccountTableViewController.m */; };
+		27EA3ACD1AE95B1E00D06AEE /* BalanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27EA3ACC1AE95B1E00D06AEE /* BalanceView.xib */; };
+		27EA3AD11AE95BEC00D06AEE /* BalanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EA3AD01AE95BEC00D06AEE /* BalanceView.m */; };
 		3053362ADB7A5261B8688668 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01865DD458A1EDDEF0A730A4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,9 @@
 		27E556D21A67F74000B504B2 /* AccountInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountInfo.h; sourceTree = "<group>"; };
 		27E556D41A67F8C800B504B2 /* AccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountTableViewController.h; path = Controllers/AccountTableViewController.h; sourceTree = "<group>"; };
 		27E556D51A67F8C800B504B2 /* AccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountTableViewController.m; path = Controllers/AccountTableViewController.m; sourceTree = "<group>"; };
+		27EA3ACC1AE95B1E00D06AEE /* BalanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BalanceView.xib; path = Views/BalanceView.xib; sourceTree = "<group>"; };
+		27EA3ACF1AE95BEC00D06AEE /* BalanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BalanceView.h; path = Views/BalanceView.h; sourceTree = "<group>"; };
+		27EA3AD01AE95BEC00D06AEE /* BalanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BalanceView.m; path = Views/BalanceView.m; sourceTree = "<group>"; };
 		46CB5005AB58AC4B7F29F9B6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B1A96E54A0DCF2965D42D521 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +122,7 @@
 				2702A3321A66C3D200F36A85 /* Supporting Files */,
 				27392ED91A67ED77000FE533 /* vultr.plist */,
 				27392EDD1A67F184000FE533 /* Models */,
+				27EA3ACE1AE95B2B00D06AEE /* Views */,
 			);
 			path = myVultr;
 			sourceTree = "<group>";
@@ -173,6 +179,16 @@
 				2754070D1A7A82CF00EED5FD /* ServersTableViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		27EA3ACE1AE95B2B00D06AEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				27EA3ACC1AE95B1E00D06AEE /* BalanceView.xib */,
+				27EA3ACF1AE95BEC00D06AEE /* BalanceView.h */,
+				27EA3AD01AE95BEC00D06AEE /* BalanceView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		3BDE725EFE6B9DA0052252B6 /* Pods */ = {
@@ -277,6 +293,7 @@
 				2702A3411A66C3D200F36A85 /* Main.storyboard in Resources */,
 				27392EDA1A67ED77000FE533 /* vultr.plist in Resources */,
 				2702A3461A66C3D200F36A85 /* LaunchScreen.xib in Resources */,
+				27EA3ACD1AE95B1E00D06AEE /* BalanceView.xib in Resources */,
 				2702A3431A66C3D200F36A85 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +350,7 @@
 				2754070E1A7A82CF00EED5FD /* ServersTableViewController.m in Sources */,
 				2754070A1A7A811A00EED5FD /* Server.m in Sources */,
 				2702A3381A66C3D200F36A85 /* AppDelegate.m in Sources */,
+				27EA3AD11AE95BEC00D06AEE /* BalanceView.m in Sources */,
 				27E556D61A67F8C800B504B2 /* AccountTableViewController.m in Sources */,
 				2794D24E1A6944AD008AFB5B /* CreateServerTableViewController.m in Sources */,
 				2794D2511A69454A008AFB5B /* LocationsTableViewController.m in Sources */,

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BalanceView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="220"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8e5-qc-SMf">
+                    <rect key="frame" x="119" y="37" width="83" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pending Charges" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcl-wT-n2F">
+                    <rect key="frame" x="102" y="140" width="117" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Oh-CR-Cd4">
+                    <rect key="frame" x="8" y="169" width="304" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fss-DB-P1C">
+                    <rect key="frame" x="288" y="191" width="304" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQv-rJ-ZMm">
+                    <rect key="frame" x="35" y="58" width="227" height="68"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="sAH-FG-Mff"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.65692359209060669" blue="0.96450144052505493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="8e5-qc-SMf" secondAttribute="centerX" id="1dP-Pb-Ej8"/>
+                <constraint firstItem="fss-DB-P1C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="6hP-QK-BHZ"/>
+                <constraint firstAttribute="centerX" secondItem="8e5-qc-SMf" secondAttribute="centerX" id="AUN-kg-2cR"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fss-DB-P1C" secondAttribute="trailing" id="Qd8-dP-3NU"/>
+                <constraint firstAttribute="centerX" secondItem="Bcl-wT-n2F" secondAttribute="centerX" id="Rp4-EM-YCZ"/>
+                <constraint firstAttribute="centerX" secondItem="eQv-rJ-ZMm" secondAttribute="centerX" id="VmT-Rq-54c"/>
+                <constraint firstAttribute="trailing" secondItem="fss-DB-P1C" secondAttribute="trailing" constant="8" id="yFh-uE-1Ox"/>
+                <constraint firstAttribute="centerX" secondItem="Bcl-wT-n2F" secondAttribute="centerX" id="zXI-qj-ood"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="balanceValueLabel" destination="eQv-rJ-ZMm" id="l4D-0q-FKk"/>
+                <outlet property="pendingChargesValueLabel" destination="4Oh-CR-Cd4" id="7cP-Gz-ZWQ"/>
+                <outlet property="updatedAtLabel" destination="fss-DB-P1C" id="0kS-Wc-Jan"/>
+            </connections>
+            <point key="canvasLocation" x="171" y="234"/>
+        </view>
+    </objects>
+</document>
