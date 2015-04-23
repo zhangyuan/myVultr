@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -46,6 +46,7 @@
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.65692359209060669" blue="0.96450144052505493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="8e5-qc-SMf" secondAttribute="centerX" id="1dP-Pb-Ej8"/>
                 <constraint firstItem="fss-DB-P1C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="6hP-QK-BHZ"/>
@@ -61,8 +62,14 @@
                 <outlet property="balanceValueLabel" destination="eQv-rJ-ZMm" id="l4D-0q-FKk"/>
                 <outlet property="pendingChargesValueLabel" destination="4Oh-CR-Cd4" id="7cP-Gz-ZWQ"/>
                 <outlet property="updatedAtLabel" destination="fss-DB-P1C" id="0kS-Wc-Jan"/>
+                <outletCollection property="gestureRecognizers" destination="90n-kf-bWE" appends="YES" id="2Yl-jM-clQ"/>
             </connections>
             <point key="canvasLocation" x="171" y="234"/>
         </view>
+        <tapGestureRecognizer id="90n-kf-bWE">
+            <connections>
+                <action selector="displayGestureForTapRecognizer:" destination="iN0-l3-epB" id="YaD-HJ-YY4"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>

@@ -17,5 +17,11 @@
     // Drawing code
 }
 */
+- (IBAction)displayGestureForTapRecognizer:(id)sender {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onTap:)]) {
+        [self.delegate onTap:self];
+    }
+}
+
 
 @end

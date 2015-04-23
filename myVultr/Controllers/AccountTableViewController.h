@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "BalanceView.h"
 
-@interface AccountTableViewController : UITableViewController
+@interface AccountTableViewController : UITableViewController  <BalanceViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *balanceValueLabel;
 @property (strong, nonatomic) IBOutlet UILabel *pendingChargesValueLabel;
 @property (strong, nonatomic) IBOutlet UITableViewCell *overviewCell;
 @property (strong, nonatomic) IBOutlet UILabel *updatedAtLabel;
 @property (strong, nonatomic) BalanceView* balanceView;
 @property (nonatomic, strong) NSArray* servers;
+
+
 @end

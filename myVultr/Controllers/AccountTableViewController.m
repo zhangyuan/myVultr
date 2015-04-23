@@ -18,12 +18,18 @@ BOOL isUpdatingAccountInfo = NO;
     [super viewDidLoad];
     
     self.balanceView = [[[NSBundle mainBundle] loadNibNamed:@"BalanceView" owner:self options:nil] objectAtIndex:0];
+    self.balanceView.delegate = self;
     
     self.tableView.tableHeaderView = self.balanceView;
+    
     isUpdatingAccountInfo = NO;
     
     [self updateAccountInfo];
     [self updateServers];
+}
+
+- (void)onTap:(BalanceView *)view {
+    [self updateAccountInfo];
 }
 
 -(void) updateServers {
@@ -35,6 +41,9 @@ BOOL isUpdatingAccountInfo = NO;
     }];
 }
 -(void) updateAccountInfo {
+    if (isUpdatingAccountInfo == YES) {
+        return;
+    }
     isUpdatingAccountInfo = YES;
     self.balanceView.balanceValueLabel.text = @"Loading...";
     self.balanceView.pendingChargesValueLabel.text = @"Loading...";

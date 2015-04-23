@@ -8,9 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class BalanceView;
+
+@protocol BalanceViewDelegate <NSObject>
+
+@optional
+- (void)onTap:(BalanceView *)view;
+
+@end
+
 @interface BalanceView : UIView
 @property (strong, nonatomic) IBOutlet UILabel *balanceValueLabel;
 @property (strong, nonatomic) IBOutlet UILabel *pendingChargesValueLabel;
 @property (strong, nonatomic) IBOutlet UILabel *updatedAtLabel;
-
+@property (nonatomic, assign) id<BalanceViewDelegate> delegate;
 @end
