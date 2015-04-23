@@ -23,8 +23,17 @@ BOOL isUpdatingAccountInfo = NO;
     isUpdatingAccountInfo = NO;
     
     [self updateAccountInfo];
+    [self updateServers];
 }
 
+-(void) updateServers {
+    [Vultr servers:[Vultr defaultApiKey] success:^(NSArray *servers) {
+        self.servers = servers;
+        [self.tableView reloadData];
+    } failure:^{
+        
+    }];
+}
 -(void) updateAccountInfo {
     isUpdatingAccountInfo = YES;
     self.balanceView.balanceValueLabel.text = @"Loading...";
@@ -32,7 +41,6 @@ BOOL isUpdatingAccountInfo = NO;
     self.balanceView.updatedAtLabel.text = @"";
     
     NSString* apiKey = [Vultr defaultApiKey];
-    
     
     [Vultr accountInfo:apiKey success:^(AccountInfo *accountInfo) {
         self.balanceView.balanceValueLabel.text = [NSString stringWithFormat:@"%@", accountInfo.balance];
@@ -50,8 +58,24 @@ BOOL isUpdatingAccountInfo = NO;
     }];
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    Server* server = [self.servers objectAtIndex:indexPath.row];
     
+    static NSString *simpleTableIdentifier = @"ServerTableCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    cell.textLabel.text = server.mainIp;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@ - %@", server.location, server.os, server.status];
+    
+    return cell;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.servers count];
+}
 @end

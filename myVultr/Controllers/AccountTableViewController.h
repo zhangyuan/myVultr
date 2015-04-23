@@ -15,4 +15,5 @@
 @property (strong, nonatomic) IBOutlet UITableViewCell *overviewCell;
 @property (strong, nonatomic) IBOutlet UILabel *updatedAtLabel;
 @property (strong, nonatomic) BalanceView* balanceView;
+@property (nonatomic, strong) NSArray* servers;
 @end
