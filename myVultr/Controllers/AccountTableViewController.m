@@ -6,6 +6,7 @@
 //
 //
 
+#import <CoreData/CoreData.h>
 #import "AccountTableViewController.h"
 #import "Vultr.h"
 #import "AccountInfo.h"
@@ -24,22 +25,83 @@ BOOL isUpdatingAccountInfo = NO;
     
     isUpdatingAccountInfo = NO;
     
+    [self refreshTableView: self.refreshControl];
     [self updateAccountInfo];
-    [self updateServers];
+    [self loadServersLocally];
 }
 
 - (void)onTap:(BalanceView *)view {
     [self updateAccountInfo];
 }
 
--(void) updateServers {
+- (IBAction)refreshTableView:(id)sender {
+    [self loadServersRemotely];
+}
+
+-(void) loadServersRemotely {
     [Vultr servers:[Vultr defaultApiKey] success:^(NSArray *servers) {
         self.servers = servers;
+        [self deleteServers];
+        [self saveServers:servers];
         [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
     } failure:^{
-        
+        [self.refreshControl endRefreshing];
     }];
 }
+
+-(void) loadServersLocally {
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Server"];
+    
+    NSArray* entities = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    NSMutableArray* servers = [NSMutableArray arrayWithCapacity: entities.count];
+
+    for (int i = 0; i < entities.count; i++) {
+        NSManagedObject* entity = entities[i];
+        
+        Server* server = [[Server alloc] init];
+        server.mainIp = [entity valueForKey:@"mainIp"];
+        server.os = [entity valueForKey:@"os"];
+        server.location = [entity valueForKey:@"location"];
+        server.status = [entity valueForKey:@"status"];
+        [servers addObject:server];
+    }
+    
+    self.servers = servers;
+    [self.tableView reloadData];
+}
+
+-(void) deleteServers {
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Server"];
+    
+    NSArray * result = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    
+    for (id server in result) {
+        [managedObjectContext deleteObject:server];
+    }
+}
+
+-(void) saveServers:(NSArray*) servers {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    for (int i = 0; i < servers.count; i++) {
+        Server* server = [servers objectAtIndex:i];
+        NSManagedObject *entity = [NSEntityDescription insertNewObjectForEntityForName:@"Server" inManagedObjectContext:context];
+        
+        [entity setValue:server.mainIp forKey:@"mainIp"];
+        [entity setValue:server.os forKey:@"os"];
+        [entity setValue:server.status forKey:@"status"];
+        [entity setValue:server.location forKey:@"location"];
+        
+        NSError *error = nil;
+        if (![context save:&error]) {
+            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+        }
+    }
+}
+
 -(void) updateAccountInfo {
     if (isUpdatingAccountInfo == YES) {
         return;
@@ -87,4 +149,15 @@ BOOL isUpdatingAccountInfo = NO;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.servers count];
 }
+
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
 @end

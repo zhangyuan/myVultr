@@ -17,5 +17,6 @@
 @property (strong, nonatomic) BalanceView* balanceView;
 @property (nonatomic, strong) NSArray* servers;
 
+- (IBAction)refreshTableView:(id)sender;
 
 @end
