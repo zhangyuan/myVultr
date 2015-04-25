@@ -18,7 +18,9 @@
 		2754070A1A7A811A00EED5FD /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 275407091A7A811A00EED5FD /* Server.m */; };
 		27BD0E5F1AEA0F2C00BC2638 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27BD0E5D1AEA0F2C00BC2638 /* DataModel.xcdatamodeld */; };
 		27BD0E621AEBE12C00BC2638 /* ServerRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BD0E611AEBE12C00BC2638 /* ServerRepository.m */; };
-		27E556D11A67F6F000B504B2 /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E556D01A67F6F000B504B2 /* AccountInfo.m */; };
+		27BD0E661AEBE76400BC2638 /* AccountRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BD0E651AEBE76400BC2638 /* AccountRepository.m */; };
+		27BD0E6A1AEBE79700BC2638 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BD0E691AEBE79700BC2638 /* Repository.m */; };
+		27E556D11A67F6F000B504B2 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E556D01A67F6F000B504B2 /* Account.m */; };
 		27E556D61A67F8C800B504B2 /* AccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E556D51A67F8C800B504B2 /* AccountTableViewController.m */; };
 		27EA3ACD1AE95B1E00D06AEE /* BalanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27EA3ACC1AE95B1E00D06AEE /* BalanceView.xib */; };
 		27EA3AD11AE95BEC00D06AEE /* BalanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EA3AD01AE95BEC00D06AEE /* BalanceView.m */; };
@@ -56,8 +58,12 @@
 		27BD0E5E1AEA0F2C00BC2638 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		27BD0E611AEBE12C00BC2638 /* ServerRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerRepository.m; path = Repositories/ServerRepository.m; sourceTree = "<group>"; };
 		27BD0E641AEBE16C00BC2638 /* ServerRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerRepository.h; path = Repositories/ServerRepository.h; sourceTree = "<group>"; };
-		27E556D01A67F6F000B504B2 /* AccountInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountInfo.m; sourceTree = "<group>"; };
-		27E556D21A67F74000B504B2 /* AccountInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountInfo.h; sourceTree = "<group>"; };
+		27BD0E651AEBE76400BC2638 /* AccountRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountRepository.m; path = Repositories/AccountRepository.m; sourceTree = "<group>"; };
+		27BD0E671AEBE77300BC2638 /* AccountRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AccountRepository.h; path = Repositories/AccountRepository.h; sourceTree = "<group>"; };
+		27BD0E681AEBE78700BC2638 /* Repository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Repository.h; path = Repositories/Repository.h; sourceTree = "<group>"; };
+		27BD0E691AEBE79700BC2638 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Repository.m; path = Repositories/Repository.m; sourceTree = "<group>"; };
+		27E556D01A67F6F000B504B2 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		27E556D21A67F74000B504B2 /* Account.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		27E556D41A67F8C800B504B2 /* AccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountTableViewController.h; path = Controllers/AccountTableViewController.h; sourceTree = "<group>"; };
 		27E556D51A67F8C800B504B2 /* AccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountTableViewController.m; path = Controllers/AccountTableViewController.m; sourceTree = "<group>"; };
 		27EA3ACC1AE95B1E00D06AEE /* BalanceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BalanceView.xib; path = Views/BalanceView.xib; sourceTree = "<group>"; };
@@ -156,8 +162,8 @@
 			children = (
 				27392EDB1A67F173000FE533 /* Vultr.m */,
 				27392EE01A67F1F7000FE533 /* Vultr.h */,
-				27E556D01A67F6F000B504B2 /* AccountInfo.m */,
-				27E556D21A67F74000B504B2 /* AccountInfo.h */,
+				27E556D01A67F6F000B504B2 /* Account.m */,
+				27E556D21A67F74000B504B2 /* Account.h */,
 				275407091A7A811A00EED5FD /* Server.m */,
 				2754070B1A7A812A00EED5FD /* Server.h */,
 			);
@@ -177,6 +183,10 @@
 			children = (
 				27BD0E611AEBE12C00BC2638 /* ServerRepository.m */,
 				27BD0E641AEBE16C00BC2638 /* ServerRepository.h */,
+				27BD0E651AEBE76400BC2638 /* AccountRepository.m */,
+				27BD0E671AEBE77300BC2638 /* AccountRepository.h */,
+				27BD0E681AEBE78700BC2638 /* Repository.h */,
+				27BD0E691AEBE79700BC2638 /* Repository.m */,
 			);
 			name = Repositories;
 			sourceTree = "<group>";
@@ -356,7 +366,9 @@
 			files = (
 				27392EDC1A67F173000FE533 /* Vultr.m in Sources */,
 				27BD0E5F1AEA0F2C00BC2638 /* DataModel.xcdatamodeld in Sources */,
-				27E556D11A67F6F000B504B2 /* AccountInfo.m in Sources */,
+				27E556D11A67F6F000B504B2 /* Account.m in Sources */,
+				27BD0E661AEBE76400BC2638 /* AccountRepository.m in Sources */,
+				27BD0E6A1AEBE79700BC2638 /* Repository.m in Sources */,
 				2754070A1A7A811A00EED5FD /* Server.m in Sources */,
 				2702A3381A66C3D200F36A85 /* AppDelegate.m in Sources */,
 				27EA3AD11AE95BEC00D06AEE /* BalanceView.m in Sources */,

@@ -9,7 +9,7 @@
 #import <CoreData/CoreData.h>
 #import "AccountTableViewController.h"
 #import "Vultr.h"
-#import "AccountInfo.h"
+#import "Account.h"
 #import "ServerRepository.h"
 
 @implementation AccountTableViewController
@@ -24,22 +24,22 @@ BOOL isUpdatingAccountInfo = NO;
     self.tableView.tableHeaderView = self.balanceView;
     
     self.serverRepository = [[ServerRepository alloc] init];
+    self.accountRepository = [[AccountRepository alloc] init];
     
     isUpdatingAccountInfo = NO;
     
-    [self refreshTableView: self.refreshControl];
-    
     [self loadServersLocally];
-    
-    [self updateAccountInfo];
+    [self loadAccountLocally];
+    [self refreshTableView: self.refreshControl];
 }
 
 - (void)onTap:(BalanceView *)view {
-    [self updateAccountInfo];
+    [self loadAccountRemotely];
 }
 
 - (IBAction)refreshTableView:(id)sender {
     [self loadServersRemotely];
+    [self loadAccountRemotely];
 }
 
 -(void) loadServersRemotely {
@@ -61,7 +61,25 @@ BOOL isUpdatingAccountInfo = NO;
     [self.tableView reloadData];
 }
 
--(void) updateAccountInfo {
+-(void) loadAccountLocally {
+    self.account = [self.accountRepository first];
+    [self renderBalanceView];
+}
+
+-(void) renderBalanceView {
+    if (self.account) {
+        self.balanceView.balanceValueLabel.text = [NSString stringWithFormat:@"%@", self.account.balance];
+        self.balanceView.pendingChargesValueLabel.text = [NSString stringWithFormat:@"%@", self.account.pendingCharges];
+        
+        NSDateFormatter *dateformatter=[[NSDateFormatter alloc]init];
+        [dateformatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        
+        self.balanceView.updatedAtLabel.text = [NSString stringWithFormat:@"Updated at %@", [dateformatter stringFromDate:self.account.updatedAt]];
+    }
+    
+}
+
+-(void) loadAccountRemotely {
     if (isUpdatingAccountInfo == YES) {
         return;
     }
@@ -72,19 +90,16 @@ BOOL isUpdatingAccountInfo = NO;
     
     NSString* apiKey = [Vultr defaultApiKey];
     
-    [Vultr accountInfo:apiKey success:^(AccountInfo *accountInfo) {
-        self.balanceView.balanceValueLabel.text = [NSString stringWithFormat:@"%@", accountInfo.balance];
-        self.balanceView.pendingChargesValueLabel.text = [NSString stringWithFormat:@"%@", accountInfo.pendingCharges];
-        
-        NSDateFormatter *dateformatter=[[NSDateFormatter alloc]init];
-        [dateformatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-
-        self.balanceView.updatedAtLabel.text = [NSString stringWithFormat:@"Updated at %@", [dateformatter stringFromDate:[NSDate date]]];
-        
+    [Vultr accountInfo:apiKey success:^(Account *account) {
+        [self.accountRepository save:account];
+        [self loadAccountLocally];
         isUpdatingAccountInfo = NO;
+        [self.refreshControl endRefreshing];
     } failure:^{
+        [self loadAccountLocally];
         isUpdatingAccountInfo = NO;
         self.balanceView.updatedAtLabel.text = @"Fail to update";
+        [self.refreshControl endRefreshing];
     }];
 }
 
@@ -107,16 +122,6 @@ BOOL isUpdatingAccountInfo = NO;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.servers count];
-}
-
-- (NSManagedObjectContext *)managedObjectContext {
-    NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
-    
-    if ([delegate performSelector:@selector(managedObjectContext)]) {
-        context = [delegate managedObjectContext];
-    }
-    return context;
 }
 
 @end

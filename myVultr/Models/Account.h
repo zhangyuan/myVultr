@@ -9,12 +9,14 @@
 #ifndef myVultr_AccountInfo_h
 #define myVultr_AccountInfo_h
 
-@interface AccountInfo : NSObject
+@interface Account : NSObject
 
-@property (nonatomic) NSString* balance;
-@property (nonatomic) NSString* pendingCharges;
+@property (nonatomic, copy) NSString* apiKey;
+@property (nonatomic, copy) NSString* balance;
+@property (nonatomic, copy) NSString* pendingCharges;
 @property (nonatomic, copy) NSString* lastPaymentDate;
 @property (nonatomic, copy) NSString* lastPaymentAmount;
+@property (nonatomic) NSDate* updatedAt;
 
 @end
 

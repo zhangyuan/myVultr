@@ -9,7 +9,9 @@
 #ifndef myVultr_ServerRepository_h
 #define myVultr_ServerRepository_h
 
-@interface ServerRepository : NSObject
+#import "Repository.h"
+
+@interface ServerRepository : Repository
 
 - (NSArray*) loadAll;
 - (void) saveCollection:(NSArray*) collection;

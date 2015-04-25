@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "AccountInfo.h"
+#import "Account.h"
 
-@implementation AccountInfo
+@implementation Account
 
 
 @end

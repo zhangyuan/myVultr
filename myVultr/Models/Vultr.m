@@ -24,11 +24,12 @@
     return [infoDict valueForKey:@"api_key"];
 }
 
-+(void) accountInfo:(NSString*) apiKey success:(void (^)(AccountInfo* accountInfo))success failure: (void (^)()) failure {
++(void) accountInfo:(NSString*) apiKey success:(void (^)(Account* accountInfo))success failure: (void (^)()) failure {
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
         [manager GET:@"https://api.vultr.com/v1/account/info" parameters:@{@"api_key" : apiKey} success:^(AFHTTPRequestOperation *operation, id responseObject) {            
-            AccountInfo* accountInfo = [[AccountInfo alloc] init];
-            
+            Account* accountInfo = [[Account alloc] init];
+            accountInfo.apiKey = apiKey;
+            accountInfo.updatedAt = [NSDate date];
             accountInfo.balance = [NSString stringWithFormat:@"%@", responseObject[@"balance"]];
             accountInfo.pendingCharges = [NSString stringWithFormat:@"%@", responseObject[@"pending_charges"]];
             accountInfo.lastPaymentDate = responseObject[@"last_payment_date"];
@@ -38,6 +39,7 @@
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"Error: %@", error);
+            failure();
         }];
 }
 
@@ -63,6 +65,7 @@
         success(servers);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
+        failure();
     }];
 
 }
@@ -90,6 +93,7 @@
         success(regions);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
+        failure();
     }];
 }
 
