@@ -12,6 +12,7 @@
 #import "Account.h"
 #import "ServerRepository.h"
 #import "ServerDetailsTableViewController.h"
+#import "Toast/UIView+Toast.h"
 
 @implementation AccountTableViewController
 
@@ -103,7 +104,16 @@ BOOL isUpdatingAccountInfo = NO;
     } failure:^(NSError* error){
         [self loadAccountLocally];
         isUpdatingAccountInfo = NO;
-        self.balanceView.updatedAtLabel.text = @"Fail to update";
+        
+        NSInteger x = self.view.frame.origin.x + self.view.frame.size.width / 2;
+        NSInteger y = self.view.frame.origin.y + self.view.frame.size.height / 2;
+        NSValue* value = [NSValue valueWithCGPoint:CGPointMake(x , y)];
+        if (error.code == 403) {
+            [self.view makeToast:@"Authentication error occurs. Please sign out and sign in with API key again." duration:6 position:value];
+        } else {
+            [self.view makeToast:@"Fail to refresh." duration:6 position:value];
+        }
+        
         [self.refreshControl endRefreshing];
     }];
 }
