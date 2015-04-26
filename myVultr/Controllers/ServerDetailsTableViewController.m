@@ -23,10 +23,10 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.ipTableViewCell.textLabel.text = self.server.mainIp;
-    self.statusTableViewCell.textLabel.text = self.server.status;
-    self.locationTableViewCell.textLabel.text = self.server.location;
-    self.osUITableViewCell.textLabel.text = self.server.os;
+    self.ipTableViewCell.detailTextLabel.text = self.server.mainIp;
+    self.statusTableViewCell.detailTextLabel.text = self.server.status;
+    self.locationTableViewCell.detailTextLabel.text = self.server.location;
+    self.osUITableViewCell.detailTextLabel.text = self.server.os;
 }
 
 - (void)didReceiveMemoryWarning {
