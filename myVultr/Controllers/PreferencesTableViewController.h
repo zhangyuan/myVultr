@@ -11,5 +11,6 @@
 
 @interface PreferencesTableViewController : UITableViewController
 @property (strong, nonatomic) IBOutlet UITableViewCell *apiKeyTableViewCell;
+@property (strong, nonatomic) IBOutlet UITableViewCell *signOutTableViewCell;
 @property (strong, nonatomic) AccountRepository* accountRepository;
 @end

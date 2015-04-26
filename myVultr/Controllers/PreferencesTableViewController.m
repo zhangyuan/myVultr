@@ -31,11 +31,22 @@
     NSString* prefix = [account.apiKey substringWithRange:NSMakeRange(0, 10)];
     
     self.apiKeyTableViewCell.detailTextLabel.text = [NSString stringWithFormat:@"%@*****", prefix];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell* cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    
+    if (cell == self.signOutTableViewCell) {
+        [self.accountRepository deleteAll];
+        self.view.window.rootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"signInViewController"];
+    }
 }
 //
 //#pragma mark - Table view data source

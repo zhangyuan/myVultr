@@ -93,6 +93,7 @@ BOOL isUpdatingAccountInfo = NO;
     NSString* apiKey = self.account.apiKey;
     
     [Vultr accountInfo:apiKey success:^(Account *account) {
+        [self.accountRepository deleteAll];
         [self.accountRepository save:account];
         [self loadAccountLocally];
         isUpdatingAccountInfo = NO;

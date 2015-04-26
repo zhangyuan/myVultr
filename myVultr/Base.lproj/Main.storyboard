@@ -27,7 +27,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="KK5-rt-epE">
             <objects>
-                <viewController id="Ggg-Ny-zih" customClass="SignInViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signInViewController" id="Ggg-Ny-zih" customClass="SignInViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Idu-FQ-NzA"/>
                         <viewControllerLayoutGuide type="bottom" id="R4W-CW-lRu"/>
@@ -285,6 +285,24 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="  " id="faI-UX-B7j">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="q1Y-yJ-yJF" style="IBUITableViewCellStyleDefault" id="Etk-q8-wI4">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Etk-q8-wI4" id="JyJ-8k-gHX">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sign Out" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q1Y-yJ-yJF">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="cbW-XU-1J7" id="aKh-b1-RgZ"/>
@@ -294,6 +312,7 @@
                     <navigationItem key="navigationItem" title="Preferences" id="bhB-fF-9ja"/>
                     <connections>
                         <outlet property="apiKeyTableViewCell" destination="v6J-5e-XoO" id="g3B-5P-XUB"/>
+                        <outlet property="signOutTableViewCell" destination="Etk-q8-wI4" id="aGy-7F-6Va"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1U-3o-ksy" userLabel="First Responder" sceneMemberID="firstResponder"/>

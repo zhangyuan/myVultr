@@ -15,7 +15,7 @@
 
 - (Account*) first;
 - (void) save:(Account*) account;
-
+- (void) deleteAll;
 @end
 
 #endif
