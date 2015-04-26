@@ -62,6 +62,12 @@
     [self.accountRepository deleteAll];
     self.view.window.rootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"signInViewController"];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UIViewController* controller = segue.destinationViewController;
+    controller.hidesBottomBarWhenPushed = YES;
+}
+
 //
 //#pragma mark - Table view data source
 //
