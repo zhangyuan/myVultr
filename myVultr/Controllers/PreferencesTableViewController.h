@@ -13,4 +13,5 @@
 @property (strong, nonatomic) IBOutlet UITableViewCell *apiKeyTableViewCell;
 @property (strong, nonatomic) IBOutlet UITableViewCell *signOutTableViewCell;
 @property (strong, nonatomic) AccountRepository* accountRepository;
+@property (strong, nonatomic) IBOutlet UITableViewCell *versionTableViewCell;
 @end

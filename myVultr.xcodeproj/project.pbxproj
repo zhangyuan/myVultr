@@ -73,6 +73,7 @@
 		27BD0E7B1AEC7F2C00BC2638 /* PreferencesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesTableViewController.m; path = Controllers/PreferencesTableViewController.m; sourceTree = "<group>"; };
 		27BD0E7E1AEC8FDD00BC2638 /* icon_270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_270.png; sourceTree = "<group>"; };
 		27BD0E7F1AEC8FDD00BC2638 /* icon_273.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_273.png; sourceTree = "<group>"; };
+		27BD0E821AECB18500BC2638 /* myMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myMacro.h; sourceTree = "<group>"; };
 		27E556D01A67F6F000B504B2 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		27E556D21A67F74000B504B2 /* Account.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		27E556D41A67F8C800B504B2 /* AccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountTableViewController.h; path = Controllers/AccountTableViewController.h; sourceTree = "<group>"; };
@@ -138,6 +139,7 @@
 				27EA3ACE1AE95B2B00D06AEE /* Views */,
 				27BD0E601AEA0F3000BC2638 /* DataModels */,
 				27BD0E631AEBE13300BC2638 /* Repositories */,
+				27BD0E821AECB18500BC2638 /* myMacro.h */,
 			);
 			path = myVultr;
 			sourceTree = "<group>";

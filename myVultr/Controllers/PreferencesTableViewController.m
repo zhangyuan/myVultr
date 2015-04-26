@@ -8,6 +8,7 @@
 
 #import "PreferencesTableViewController.h"
 #import "Account.h"
+#import "myMacro.h"
 
 @interface PreferencesTableViewController () <UIActionSheetDelegate>
 
@@ -31,6 +32,8 @@
     NSString* prefix = [account.apiKey substringWithRange:NSMakeRange(0, 10)];
     
     self.apiKeyTableViewCell.detailTextLabel.text = [NSString stringWithFormat:@"%@*****", prefix];
+    
+    self.versionTableViewCell.detailTextLabel.text = MY_VULTR_VERSION;
     
 
 }
