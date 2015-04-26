@@ -26,7 +26,14 @@
     self.ipTableViewCell.detailTextLabel.text = self.server.mainIp;
     self.statusTableViewCell.detailTextLabel.text = self.server.status;
     self.locationTableViewCell.detailTextLabel.text = self.server.location;
-    self.osUITableViewCell.detailTextLabel.text = self.server.os;
+    self.osTableViewCell.detailTextLabel.text = self.server.os;
+    self.labelTableViewCell.detailTextLabel.text = self.server.label;
+    self.powerStatusTableViewCell.detailTextLabel.text = self.server.powerStatus;
+    self.ramTableViewCell.detailTextLabel.text = self.server.ram;
+    self.diskTableViewCell.detailTextLabel.text = self.server.disk;
+    self.createdDateTableViewCell.detailTextLabel.text = self.server.dateCreated;
+    self.bandWidthTableViewCell.detailTextLabel.text = self.server.bandwidth;
+    self.vcpuCountTableViewCell.detailTextLabel.text = self.server.vcpuCount;
 }
 
 - (void)didReceiveMemoryWarning {

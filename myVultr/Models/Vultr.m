@@ -51,6 +51,15 @@
             server.os = serverObject[@"os"];
             server.location = serverObject[@"location"];
             server.status = serverObject[@"status"];
+            server.label = serverObject[@"label"];
+            server.powerStatus = serverObject[@"power_status"];
+            server.ram = serverObject[@"ram"];
+            server.disk = serverObject[@"disk"];
+            server.dateCreated = serverObject[@"date_created"];
+            
+            server.currentBandwidthGb = [NSString stringWithFormat:@"%f", [serverObject[@"current_bandwidth_gb"] floatValue]];
+            server.allowedBandwidthGb = serverObject[@"allowed_bandwidth_gb"];
+            server.vcpuCount = serverObject[@"vcpu_count"];
             [servers addObject:server];
         }
               

@@ -7,16 +7,22 @@
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <entity name="Server" syncable="YES">
-        <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="allowedBandwidthGb" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currentBandwidthGb" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="disk" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mainIp" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="os" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="powerStatus" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ram" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vcpuCount" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="Account" positionX="0" positionY="0" width="128" height="105"/>
-        <element name="Server" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="Server" positionX="0" positionY="0" width="128" height="238"/>
     </elements>
 </model>

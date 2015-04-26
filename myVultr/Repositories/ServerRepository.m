@@ -24,15 +24,27 @@
     for (int i = 0; i < entities.count; i++) {
         NSManagedObject* entity = entities[i];
         
-        Server* server = [[Server alloc] init];
-        server.mainIp = [entity valueForKey:@"mainIp"];
-        server.os = [entity valueForKey:@"os"];
-        server.location = [entity valueForKey:@"location"];
-        server.status = [entity valueForKey:@"status"];
+        Server* server = [self initializeFromEntity:entity];
         [servers addObject:server];
     }
 
     return servers;
+}
+
+-(Server*) initializeFromEntity:(NSManagedObject*) entity {
+    Server* server = [[Server alloc] init];
+    server.mainIp = [entity valueForKey:@"mainIp"];
+    server.os = [entity valueForKey:@"os"];
+    server.location = [entity valueForKey:@"location"];
+    server.status = [entity valueForKey:@"status"];
+    server.label = [entity valueForKey:@"label"];
+    server.powerStatus = [entity valueForKey:@"powerStatus"];
+    server.ram = [entity valueForKey:@"ram"];
+    server.ram = [entity valueForKey:@"disk"];
+    server.dateCreated = [entity valueForKey:@"dateCreated"];
+    server.currentBandwidthGb = [entity valueForKey:@"currentBandwidthGb"];
+    server.allowedBandwidthGb = [entity valueForKey:@"allowedBandwidthGb"];
+    return server;
 }
 
 - (void) saveCollection:(NSArray*) collection {
@@ -46,6 +58,13 @@
         [entity setValue:server.os forKey:@"os"];
         [entity setValue:server.status forKey:@"status"];
         [entity setValue:server.location forKey:@"location"];
+        [entity setValue: server.label forKey:@"label"];
+        [entity setValue: server.powerStatus forKey:@"powerStatus"];
+        [entity setValue: server.ram forKey:@"ram"];
+        [entity setValue: server.disk forKey:@"disk"];
+        [entity setValue: server.dateCreated forKey:@"dateCreated"];
+        [entity setValue: server.currentBandwidthGb forKey:@"currentBandwidthGb"];
+        [entity setValue: server.allowedBandwidthGb forKey:@"allowedBandwidthGb"];
         
         NSError *error = nil;
         if (![context save:&error]) {

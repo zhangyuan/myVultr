@@ -12,5 +12,13 @@
 
 @implementation Server
 
+-(NSString*) bandwidth {
+    if (self.currentBandwidthGb && self.allowedBandwidthGb) {
+        return [NSString stringWithFormat:@"%@ / %@", self.currentBandwidthGb , self.allowedBandwidthGb];
+    } else {
+        return nil;
+    }
+    
+}
 
 @end
