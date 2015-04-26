@@ -539,7 +539,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPm-J5-et2">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPm-J5-et2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="471"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
@@ -566,6 +566,13 @@ Vultr API: https://www.vultr.com/api/</string>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TPm-J5-et2" firstAttribute="top" secondItem="fj5-PP-ARx" secondAttribute="topMargin" constant="10" id="DLt-ew-KAr"/>
+                            <constraint firstItem="TPm-J5-et2" firstAttribute="leading" secondItem="fj5-PP-ARx" secondAttribute="leadingMargin" id="Rt2-0y-ZV5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TPm-J5-et2" secondAttribute="trailing" constant="10" id="S50-pj-EEd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TPm-J5-et2" secondAttribute="trailing" id="bG3-sr-0gV"/>
+                            <constraint firstItem="TPm-J5-et2" firstAttribute="leading" secondItem="fj5-PP-ARx" secondAttribute="leadingMargin" constant="10" id="db8-SV-9gI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About myVultr" id="zUC-yH-G3f"/>
                 </viewController>
