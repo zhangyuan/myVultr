@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="-182" y="30"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="KK5-rt-epE">
             <objects>
-                <viewController id="Ggg-Ny-zih" sceneMemberID="viewController">
+                <viewController id="Ggg-Ny-zih" customClass="SignInViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Idu-FQ-NzA"/>
                         <viewControllerLayoutGuide type="bottom" id="R4W-CW-lRu"/>
@@ -52,12 +52,17 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="49e-Tb-3d3" kind="modal" id="SWh-k4-4MB"/>
+                                    <action selector="signIn:" destination="Ggg-Ny-zih" eventType="touchUpInside" id="pCm-gd-xm0"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="apiKeyTextField" destination="iDd-dI-foa" id="5iF-8Q-HW6"/>
+                        <outlet property="submitButton" destination="WRe-T2-ztm" id="Ynd-OL-s6r"/>
+                        <segue destination="suf-Bx-l7t" kind="modal" identifier="showDashboard" id="UuD-fc-2VA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="742-QN-pQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,4 +201,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="UuD-fc-2VA"/>
+    </inferredMetricsTieBreakers>
 </document>

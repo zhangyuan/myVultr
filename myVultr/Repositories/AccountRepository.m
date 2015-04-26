@@ -20,11 +20,7 @@
     
     if (entities.count > 0) {
         NSManagedObject* entity = entities[0];
-        Account* account = [[Account alloc] init];
-        account.balance = [entity valueForKey:@"balance"];
-        account.pendingCharges = [entity valueForKey:@"pendingCharges"];
-        account.updatedAt = [entity valueForKey:@"updatedAt"];
-        return  account;
+        return [self initializeAccountManagedObject:entity];
     } else {
         return nil;
     }
@@ -44,6 +40,15 @@
     if (![context save:&error]) {
         NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
+}
+
+-(Account*) initializeAccountManagedObject:(NSManagedObject*) entity {
+    Account* account = [[Account alloc] init];
+    account.apiKey = [entity valueForKey:@"apiKey"];
+    account.balance = [entity valueForKey:@"balance"];
+    account.pendingCharges = [entity valueForKey:@"pendingCharges"];
+    account.updatedAt = [entity valueForKey:@"updatedAt"];
+    return account;
 }
 
 @end

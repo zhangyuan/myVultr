@@ -29,8 +29,9 @@ BOOL isUpdatingAccountInfo = NO;
     
     isUpdatingAccountInfo = NO;
     
-    [self loadServersLocally];
     [self loadAccountLocally];
+    [self loadServersLocally];
+    
     [self refreshTableView: self.refreshControl];
 }
 
@@ -89,7 +90,7 @@ BOOL isUpdatingAccountInfo = NO;
     self.balanceView.pendingChargesValueLabel.text = @"Loading...";
     self.balanceView.updatedAtLabel.text = @"";
     
-    NSString* apiKey = [Vultr defaultApiKey];
+    NSString* apiKey = self.account.apiKey;
     
     [Vultr accountInfo:apiKey success:^(Account *account) {
         [self.accountRepository save:account];
