@@ -35,7 +35,8 @@
     
     self.versionTableViewCell.detailTextLabel.text = MY_VULTR_VERSION;
     
-
+    UIView *v = [[UIView alloc] initWithFrame:CGRectZero];
+    [self.tableView setTableFooterView:v];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -23,6 +23,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    UIView *v = [[UIView alloc] initWithFrame:CGRectZero];
+    [self.tableView setTableFooterView:v];
+    
     self.ipTableViewCell.detailTextLabel.text = self.server.mainIp;
     self.statusTableViewCell.detailTextLabel.text = self.server.status;
     self.locationTableViewCell.detailTextLabel.text = self.server.location;

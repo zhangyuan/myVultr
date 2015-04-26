@@ -23,6 +23,8 @@ BOOL isUpdatingAccountInfo = NO;
     self.balanceView = [[[NSBundle mainBundle] loadNibNamed:@"BalanceView" owner:self options:nil] objectAtIndex:0];
     self.balanceView.delegate = self;
     self.tableView.tableHeaderView = self.balanceView;
+    UIView *v = [[UIView alloc] initWithFrame:CGRectZero];
+    [self.tableView setTableFooterView:v];
     
     self.serverRepository = [[ServerRepository alloc] init];
     self.accountRepository = [[AccountRepository alloc] init];
