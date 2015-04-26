@@ -37,6 +37,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="flower.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qDk-DH-k5g">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="API Key" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iDd-dI-foa">
                                 <rect key="frame" x="16" y="183" width="479" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -49,7 +52,7 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRe-T2-ztm">
                                 <rect key="frame" x="272" y="227" width="56" height="34"/>
                                 <state key="normal" title="Sign in">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="disabled">
                                     <color key="titleColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,23 +70,29 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="myVultr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFe-yC-b7N">
                                 <rect key="frame" x="207" y="64" width="187" height="57"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="42"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="API key can be found in Vultr console." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdy-q0-i2e">
                                 <rect key="frame" x="16" y="146" width="291" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.8787112832069397" blue="0.94215631484985352" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="qDk-DH-k5g" firstAttribute="top" secondItem="gMy-IL-s8H" secondAttribute="topMargin" id="7GK-rS-qSP"/>
+                            <constraint firstItem="qPB-fn-3HD" firstAttribute="top" secondItem="qDk-DH-k5g" secondAttribute="bottom" id="8cP-RJ-JQ9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qDk-DH-k5g" secondAttribute="trailing" id="FUt-ub-MLS"/>
+                            <constraint firstAttribute="centerY" secondItem="qDk-DH-k5g" secondAttribute="centerY" id="Lc8-Ie-Nly"/>
                             <constraint firstAttribute="centerX" secondItem="tFe-yC-b7N" secondAttribute="centerX" id="Qmi-Q5-mAv"/>
                             <constraint firstItem="iDd-dI-foa" firstAttribute="trailing" secondItem="gMy-IL-s8H" secondAttribute="trailingMargin" id="Z52-lF-Pei"/>
+                            <constraint firstAttribute="centerX" secondItem="qDk-DH-k5g" secondAttribute="centerX" id="cVc-bu-JdQ"/>
                             <constraint firstAttribute="centerX" secondItem="WRe-T2-ztm" secondAttribute="centerX" id="f3o-qp-Ume"/>
                             <constraint firstAttribute="centerX" secondItem="iDd-dI-foa" secondAttribute="centerX" id="glO-h2-lXM"/>
                             <constraint firstAttribute="centerX" secondItem="jdy-q0-i2e" secondAttribute="centerX" id="tQM-NK-jf1"/>
+                            <constraint firstItem="qDk-DH-k5g" firstAttribute="leading" secondItem="gMy-IL-s8H" secondAttribute="leadingMargin" id="xfo-q9-k5s"/>
                         </constraints>
                     </view>
                     <connections>
@@ -617,6 +626,7 @@ Vultr API: https://www.vultr.com/api/</string>
         </scene>
     </scenes>
     <resources>
+        <image name="flower.jpg" width="1024" height="1024"/>
         <image name="icon_270.png" width="30" height="30"/>
         <image name="icon_273.png" width="30" height="30"/>
     </resources>
