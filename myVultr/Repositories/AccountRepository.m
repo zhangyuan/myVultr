@@ -18,10 +18,6 @@
     
     NSArray* entities = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
     
-    for (id account in entities) {
-        NSLog(@"%@", account);
-    }
-    
     if (entities.count > 0) {
         NSManagedObject* entity = entities[0];
         return [self initializeAccountManagedObject:entity];
@@ -37,11 +33,11 @@
     NSArray * entities = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
     
     for (id account in entities) {
-        for (id account in entities) {
-            NSLog(@"%@", account);
-        }
         [managedObjectContext deleteObject:account];
     }
+    
+    NSError *saveError = nil;
+    [managedObjectContext save: &saveError];
 }
 
 -(void) save:(Account*) account{
