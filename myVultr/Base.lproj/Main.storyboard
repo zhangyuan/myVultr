@@ -285,6 +285,27 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="  " id="wH7-9G-QAs">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="nVc-Ff-74X" style="IBUITableViewCellStyleDefault" id="siW-g1-Mxu">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="siW-g1-Mxu" id="al0-Ge-GsS">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="About myVultr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nVc-Ff-74X">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="YwP-Z0-4tU" kind="push" id="WgR-Xd-Mcz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection headerTitle="  " id="faI-UX-B7j">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="q1Y-yJ-yJF" style="IBUITableViewCellStyleDefault" id="Etk-q8-wI4">
@@ -318,6 +339,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1U-3o-ksy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1006" y="925"/>
+        </scene>
+        <!--About myVultr-->
+        <scene sceneID="p3W-Bv-9xk">
+            <objects>
+                <viewController id="YwP-Z0-4tU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TMf-RF-yfT"/>
+                        <viewControllerLayoutGuide type="bottom" id="3e1-a7-HnF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fj5-PP-ARx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPm-J5-et2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="471"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">myVultr is an unofficial dashboard app for Vultr cloud server. With Vultr's API, it helps inquirey the account balance and monitor servers' status.
+
+Author:
+Twitter: @evyuancheung
+Email: evyuancheung@gmail.com
+
+Links:
+
+Vultr Official Website: https://www.vultr.com/
+Vultr API: https://www.vultr.com/api/</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About myVultr" id="zUC-yH-G3f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zfc-Pc-bMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1405" y="965"/>
         </scene>
         <!--Preferences-->
         <scene sceneID="TQH-cq-rdS">
