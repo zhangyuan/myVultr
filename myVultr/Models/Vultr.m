@@ -14,15 +14,7 @@
 
 @end
 
-
 @implementation Vultr
-
-+(NSString*) defaultApiKey {
-    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"vultr" ofType:@"plist"];
-    NSMutableDictionary* infoDict = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
-    
-    return [infoDict valueForKey:@"api_key"];
-}
 
 +(void) accountInfo:(NSString*) apiKey success:(void (^)(Account* accountInfo))success failure: (void (^)()) failure {
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];

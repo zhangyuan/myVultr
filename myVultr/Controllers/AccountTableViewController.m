@@ -45,7 +45,7 @@ BOOL isUpdatingAccountInfo = NO;
 }
 
 -(void) loadServersRemotely {
-    [Vultr servers:[Vultr defaultApiKey] success:^(NSArray *servers) {
+    [Vultr servers: self.account.apiKey success:^(NSArray *servers) {
         self.servers = servers;
         
         [self.serverRepository deleteAll];
