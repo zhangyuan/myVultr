@@ -237,7 +237,7 @@
         <scene sceneID="rtd-iI-bKd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bdB-ha-eYb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="haP-NN-PxD"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="icon_270.png" id="haP-NN-PxD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zI5-A9-zdp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -323,7 +323,7 @@
         <scene sceneID="TQH-cq-rdS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="54U-rQ-V67" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Preferences" id="w2H-5t-L3x"/>
+                    <tabBarItem key="tabBarItem" title="Preferences" image="icon_273.png" id="w2H-5t-L3x"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7ng-CP-efu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -336,9 +336,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlS-EU-ZjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474" y="925"/>
+            <point key="canvasLocation" x="-182" y="917"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_270.png" width="30" height="30"/>
+        <image name="icon_273.png" width="30" height="30"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
