@@ -11,7 +11,7 @@
 #import "Toast/UIView+Toast.h"
 
 
-@interface SignInViewController ()
+@interface SignInViewController () <UITextFieldDelegate>
 
 @end
 
@@ -21,6 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.accountRepository = [[AccountRepository alloc] init];
+    self.submitButton.enabled = false;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,6 +66,15 @@
     }];
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if ([self isValid]) {
+        [self signIn:textField];
+        return TRUE;
+    } else {
+        return FALSE;
+    }
+}
+
 -(void) beforeSignIn {
     [self.view makeToastActivity];
     self.submitButton.enabled = false;
@@ -74,5 +84,17 @@
 -(void) afterSignIn {
     [self.view hideToastActivity];
     self.submitButton.enabled = true;
+}
+
+- (IBAction)apiKeyTextFieldEditingChanged:(UITextField* )sender {
+    if ([self isValid]) {
+        self.submitButton.enabled = true;
+    } else{
+        self.submitButton.enabled = false;
+    }
+}
+
+-(BOOL) isValid {
+    return self.apiKeyTextField.text.length > 5;
 }
 @end

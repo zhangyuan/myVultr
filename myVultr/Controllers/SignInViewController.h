@@ -14,5 +14,6 @@
 - (IBAction)signIn:(id)sender;
 @property (strong, nonatomic) AccountRepository* accountRepository;
 @property (strong, nonatomic) IBOutlet UIButton *submitButton;
+- (IBAction)apiKeyTextFieldEditingChanged:(id)sender;
 
 @end
