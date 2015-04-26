@@ -8,6 +8,8 @@
 
 #import "SignInViewController.h"
 #import "Vultr.h"
+#import "Toast/UIView+Toast.h"
+
 
 @interface SignInViewController ()
 
@@ -37,15 +39,29 @@
 */
 
 - (IBAction)signIn:(id)sender {
+    if (!self.apiKeyTextField.text) {
+        return;
+    }
+    
     NSString* apiKey = self.apiKeyTextField.text;
     self.submitButton.enabled = false;
+    [self.apiKeyTextField resignFirstResponder];
     
     [Vultr accountInfo:apiKey success:^(Account *account) {
         self.submitButton.enabled = true;
         [self.accountRepository save:account];
         [self performSegueWithIdentifier:@"showDashboard" sender: sender];
-    } failure:^{
+    } failure:^(NSError *error){
         self.submitButton.enabled = true;
+        NSInteger x = self.view.frame.origin.x + self.view.frame.size.width / 2;
+        NSInteger y = self.view.frame.origin.y + self.view.frame.size.height / 2;
+        NSValue* value = [NSValue valueWithCGPoint:CGPointMake(x , y)];
+        
+        if (error.code == 403) {
+            [self.view makeToast:@"Please check the API Key." duration: 3 position: value];
+        } else {
+            [self.view makeToast:@"Error occurs, please try again later." duration: 3 position:value];
+        }
     }];
 }
 @end

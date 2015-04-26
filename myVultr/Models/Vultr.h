@@ -14,7 +14,7 @@
 
 @interface Vultr : NSObject
 
-+(void) accountInfo:(NSString*) apiKey success:(void (^)(Account* accountInfo))success failure: (void (^)()) failure;
++(void) accountInfo:(NSString*) apiKey success:(void (^)(Account* accountInfo))success failure: (void (^)(NSError *error)) failure;
 +(void) regions:(NSString*) apiKey success:(void (^)(NSArray* regions))success failure: (void (^)()) failure;
 +(void) servers:(NSString*) apiKey success:(void (^)(NSArray* servers))success failure: (void (^)()) failure;
 @end

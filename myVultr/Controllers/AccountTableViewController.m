@@ -98,7 +98,7 @@ BOOL isUpdatingAccountInfo = NO;
         [self loadAccountLocally];
         isUpdatingAccountInfo = NO;
         [self.refreshControl endRefreshing];
-    } failure:^{
+    } failure:^(NSError* error){
         [self loadAccountLocally];
         isUpdatingAccountInfo = NO;
         self.balanceView.updatedAtLabel.text = @"Fail to update";

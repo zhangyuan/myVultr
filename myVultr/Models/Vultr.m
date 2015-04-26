@@ -16,7 +16,7 @@
 
 @implementation Vultr
 
-+(void) accountInfo:(NSString*) apiKey success:(void (^)(Account* accountInfo))success failure: (void (^)()) failure {
++(void) accountInfo:(NSString*) apiKey success:(void (^)(Account* accountInfo))success failure: (void (^)(NSError *error)) failure {
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
         [manager GET:@"https://api.vultr.com/v1/account/info" parameters:@{@"api_key" : apiKey} success:^(AFHTTPRequestOperation *operation, id responseObject) {            
             Account* accountInfo = [[Account alloc] init];
@@ -31,7 +31,14 @@
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"Error: %@", error);
-            failure();
+            
+            if (operation.response.statusCode == 403) {
+                NSError* e = [NSError errorWithDomain:error.domain code:403 userInfo:nil];
+                failure(e);
+            } else{
+                failure(error);
+            }
+            
         }];
 }
 
