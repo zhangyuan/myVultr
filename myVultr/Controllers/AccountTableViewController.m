@@ -36,7 +36,7 @@ BOOL isUpdatingAccountInfo = NO;
 }
 
 - (void)onTap:(BalanceView *)view {
-    [self loadAccountRemotely];
+
 }
 
 - (IBAction)refreshTableView:(id)sender {
