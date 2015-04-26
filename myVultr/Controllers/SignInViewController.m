@@ -43,16 +43,16 @@
         return;
     }
     
+    [self beforeSignIn];
+    
     NSString* apiKey = self.apiKeyTextField.text;
-    self.submitButton.enabled = false;
-    [self.apiKeyTextField resignFirstResponder];
     
     [Vultr accountInfo:apiKey success:^(Account *account) {
-        self.submitButton.enabled = true;
+        [self afterSignIn];
         [self.accountRepository save:account];
         [self performSegueWithIdentifier:@"showDashboard" sender: sender];
     } failure:^(NSError *error){
-        self.submitButton.enabled = true;
+        [self afterSignIn];
         NSInteger x = self.view.frame.origin.x + self.view.frame.size.width / 2;
         NSInteger y = self.view.frame.origin.y + self.view.frame.size.height / 2;
         NSValue* value = [NSValue valueWithCGPoint:CGPointMake(x , y)];
@@ -63,5 +63,16 @@
             [self.view makeToast:@"Error occurs, please try again later." duration: 3 position:value];
         }
     }];
+}
+
+-(void) beforeSignIn {
+    [self.view makeToastActivity];
+    self.submitButton.enabled = false;
+    [self.apiKeyTextField resignFirstResponder];
+}
+
+-(void) afterSignIn {
+    [self.view hideToastActivity];
+    self.submitButton.enabled = true;
 }
 @end
