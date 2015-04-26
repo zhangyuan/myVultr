@@ -515,7 +515,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">myVultr is an unofficial dashboard app for Vultr cloud server. With Vultr's API, it helps inquiry the account balance and monitor servers' status.
+                                        <string key="content">myVultr is an unofficial dashboard and open-source app for Vultr cloud server. With Vultr's API, it helps inquiry the account balance and monitor servers' status.
+
+Github URL: https://github.com/zhangyuan/myVultr
 
 Author:
 Twitter: @evyuancheung
