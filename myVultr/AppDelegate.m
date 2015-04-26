@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "AccountRepository.h"
+#import "Account.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +20,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    AccountRepository* repo = [[AccountRepository alloc] init];
+    Account* account = [repo first];
+    
+    if (account) {
+        self.window.rootViewController = [storyBoard instantiateViewControllerWithIdentifier:@"mainTabBarViewController"];
+        [self.window makeKeyAndVisible];
+    }
     
     return YES;
 }
