@@ -11,6 +11,7 @@
 #import "Vultr.h"
 #import "Account.h"
 #import "ServerRepository.h"
+#import "ServerDetailsTableViewController.h"
 
 @implementation AccountTableViewController
 
@@ -101,6 +102,17 @@ BOOL isUpdatingAccountInfo = NO;
         self.balanceView.updatedAtLabel.text = @"Fail to update";
         [self.refreshControl endRefreshing];
     }];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showServerDetails"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        ServerDetailsTableViewController *destViewController = segue.destinationViewController;
+        destViewController.server = [self.servers objectAtIndex:indexPath.row];
+    }
+    
+    UIViewController* controller = segue.destinationViewController;
+    controller.hidesBottomBarWhenPushed = YES;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -20,6 +20,7 @@
 		27BD0E621AEBE12C00BC2638 /* ServerRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BD0E611AEBE12C00BC2638 /* ServerRepository.m */; };
 		27BD0E661AEBE76400BC2638 /* AccountRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BD0E651AEBE76400BC2638 /* AccountRepository.m */; };
 		27BD0E6A1AEBE79700BC2638 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BD0E691AEBE79700BC2638 /* Repository.m */; };
+		27BD0E731AEC6A9200BC2638 /* ServerDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BD0E721AEC6A9200BC2638 /* ServerDetailsTableViewController.m */; };
 		27E556D11A67F6F000B504B2 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E556D01A67F6F000B504B2 /* Account.m */; };
 		27E556D61A67F8C800B504B2 /* AccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E556D51A67F8C800B504B2 /* AccountTableViewController.m */; };
 		27EA3ACD1AE95B1E00D06AEE /* BalanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27EA3ACC1AE95B1E00D06AEE /* BalanceView.xib */; };
@@ -62,6 +63,8 @@
 		27BD0E671AEBE77300BC2638 /* AccountRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AccountRepository.h; path = Repositories/AccountRepository.h; sourceTree = "<group>"; };
 		27BD0E681AEBE78700BC2638 /* Repository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Repository.h; path = Repositories/Repository.h; sourceTree = "<group>"; };
 		27BD0E691AEBE79700BC2638 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Repository.m; path = Repositories/Repository.m; sourceTree = "<group>"; };
+		27BD0E711AEC6A9200BC2638 /* ServerDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerDetailsTableViewController.h; path = Controllers/ServerDetailsTableViewController.h; sourceTree = "<group>"; };
+		27BD0E721AEC6A9200BC2638 /* ServerDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerDetailsTableViewController.m; path = Controllers/ServerDetailsTableViewController.m; sourceTree = "<group>"; };
 		27E556D01A67F6F000B504B2 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		27E556D21A67F74000B504B2 /* Account.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		27E556D41A67F8C800B504B2 /* AccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountTableViewController.h; path = Controllers/AccountTableViewController.h; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 			children = (
 				27E556D41A67F8C800B504B2 /* AccountTableViewController.h */,
 				27E556D51A67F8C800B504B2 /* AccountTableViewController.m */,
+				27BD0E711AEC6A9200BC2638 /* ServerDetailsTableViewController.h */,
+				27BD0E721AEC6A9200BC2638 /* ServerDetailsTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27392EDC1A67F173000FE533 /* Vultr.m in Sources */,
+				27BD0E731AEC6A9200BC2638 /* ServerDetailsTableViewController.m in Sources */,
 				27BD0E5F1AEA0F2C00BC2638 /* DataModel.xcdatamodeld in Sources */,
 				27E556D11A67F6F000B504B2 /* Account.m in Sources */,
 				27BD0E661AEBE76400BC2638 /* AccountRepository.m in Sources */,
