@@ -61,7 +61,7 @@
                     <connections>
                         <outlet property="apiKeyTextField" destination="iDd-dI-foa" id="5iF-8Q-HW6"/>
                         <outlet property="submitButton" destination="WRe-T2-ztm" id="Ynd-OL-s6r"/>
-                        <segue destination="suf-Bx-l7t" kind="modal" identifier="showDashboard" id="UuD-fc-2VA"/>
+                        <segue destination="49e-Tb-3d3" kind="modal" identifier="showDashboard" id="FFs-5P-xAq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="742-QN-pQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -201,7 +201,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="cDl-Bg-vq3"/>
-    </inferredMetricsTieBreakers>
 </document>
