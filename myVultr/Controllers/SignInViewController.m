@@ -66,6 +66,10 @@
     }];
 }
 
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if ([self isValid]) {
         [self signIn:textField];
