@@ -9,7 +9,7 @@
 #import "PreferencesTableViewController.h"
 #import "Account.h"
 
-@interface PreferencesTableViewController ()
+@interface PreferencesTableViewController () <UIActionSheetDelegate>
 
 @end
 
@@ -44,9 +44,23 @@
     UITableViewCell* cell = [self.tableView cellForRowAtIndexPath:indexPath];
     
     if (cell == self.signOutTableViewCell) {
-        [self.accountRepository deleteAll];
-        self.view.window.rootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"signInViewController"];
+        UIActionSheet *as = [[UIActionSheet alloc] initWithTitle:@"Are you sure?"
+                                                        delegate:self
+                                               cancelButtonTitle: @"Cancel" destructiveButtonTitle: @"Sign out" otherButtonTitles:nil, nil];
+
+        [as showInView:self.view];
     }
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        [self signOut];
+    }
+}
+
+-(void) signOut {
+    [self.accountRepository deleteAll];
+    self.view.window.rootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"signInViewController"];
 }
 //
 //#pragma mark - Table view data source
