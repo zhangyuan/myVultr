@@ -73,10 +73,16 @@
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="API key can be found in Vultr console." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdy-q0-i2e">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="API key can be found in Vultr console's Settings." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdy-q0-i2e">
                                 <rect key="frame" x="16" y="146" width="291" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="1" green="0.8787112832069397" blue="0.94215631484985352" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="https://vultr.com/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACE-tU-vpX">
+                                <rect key="frame" x="272" y="117" width="131" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96068984270095825" green="0.96085053682327271" blue="0.96066862344741821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -91,6 +97,7 @@
                             <constraint firstAttribute="centerX" secondItem="qDk-DH-k5g" secondAttribute="centerX" id="cVc-bu-JdQ"/>
                             <constraint firstAttribute="centerX" secondItem="WRe-T2-ztm" secondAttribute="centerX" id="f3o-qp-Ume"/>
                             <constraint firstAttribute="centerX" secondItem="iDd-dI-foa" secondAttribute="centerX" id="glO-h2-lXM"/>
+                            <constraint firstAttribute="centerX" secondItem="ACE-tU-vpX" secondAttribute="centerX" id="pNV-d3-FIj"/>
                             <constraint firstAttribute="centerX" secondItem="jdy-q0-i2e" secondAttribute="centerX" id="tQM-NK-jf1"/>
                             <constraint firstItem="qDk-DH-k5g" firstAttribute="leading" secondItem="gMy-IL-s8H" secondAttribute="leadingMargin" id="xfo-q9-k5s"/>
                         </constraints>
