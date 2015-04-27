@@ -37,7 +37,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="flower.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qDk-DH-k5g">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="launch1242x2208.png" translatesAutoresizingMaskIntoConstraints="NO" id="qDk-DH-k5g">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="API Key" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iDd-dI-foa">
@@ -624,8 +624,8 @@ Vultr API: https://www.vultr.com/api/</string>
         </scene>
     </scenes>
     <resources>
-        <image name="flower.jpg" width="1024" height="1024"/>
         <image name="icon_270.png" width="30" height="30"/>
         <image name="icon_273.png" width="30" height="30"/>
+        <image name="launch1242x2208.png" width="1242" height="2208"/>
     </resources>
 </document>
