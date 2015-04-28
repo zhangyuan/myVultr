@@ -9,7 +9,7 @@
 #ifndef myVultr_myMacro_h
 #define myVultr_myMacro_h
 
-#define MY_VULTR_VERSION @"0.0.2"
+#define MY_VULTR_VERSION @"0.0.3"
 
 
 #endif

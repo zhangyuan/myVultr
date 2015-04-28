@@ -33,7 +33,6 @@
 		27BD0E8B1AECCB5500BC2638 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BD0E891AECCB5500BC2638 /* icon.png */; };
 		27BD0E8C1AECCB5500BC2638 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BD0E8A1AECCB5500BC2638 /* icon@2x.png */; };
 		27BD0E8E1AECCC9400BC2638 /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BD0E8D1AECCC9400BC2638 /* icon@3x.png */; };
-		27DA2C741AEFC37E008136D3 /* launch320x568.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DA2C731AEFC37E008136D3 /* launch320x568.png */; };
 		27E556D11A67F6F000B504B2 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E556D01A67F6F000B504B2 /* Account.m */; };
 		27E556D61A67F8C800B504B2 /* AccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E556D51A67F8C800B504B2 /* AccountTableViewController.m */; };
 		27EA3ACD1AE95B1E00D06AEE /* BalanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27EA3ACC1AE95B1E00D06AEE /* BalanceView.xib */; };
@@ -95,7 +94,6 @@
 		27BD0E891AECCB5500BC2638 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		27BD0E8A1AECCB5500BC2638 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		27BD0E8D1AECCC9400BC2638 /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
-		27DA2C731AEFC37E008136D3 /* launch320x568.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch320x568.png; sourceTree = "<group>"; };
 		27E556D01A67F6F000B504B2 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		27E556D21A67F74000B504B2 /* Account.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		27E556D41A67F8C800B504B2 /* AccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountTableViewController.h; path = Controllers/AccountTableViewController.h; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 		27BD0E7D1AEC8FDD00BC2638 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				27DA2C731AEFC37E008136D3 /* launch320x568.png */,
 				275583651AEE881D000A22ED /* Icon-76.png */,
 				275583661AEE881D000A22ED /* Icon-76@2x.png */,
 				275583671AEE881D000A22ED /* icon@1024x1024.png */,
@@ -387,7 +384,6 @@
 				27EA3ACD1AE95B1E00D06AEE /* BalanceView.xib in Resources */,
 				275583741AEE881D000A22ED /* launch750x1334.png in Resources */,
 				F14B9D121AEEFFD400EE8963 /* launch640x960.png in Resources */,
-				27DA2C741AEFC37E008136D3 /* launch320x568.png in Resources */,
 				2702A3431A66C3D200F36A85 /* Images.xcassets in Resources */,
 				F14B9CB01AEEC2D600EE8963 /* launch640x1136.png in Resources */,
 				27BD0E8C1AECCB5500BC2638 /* icon@2x.png in Resources */,
