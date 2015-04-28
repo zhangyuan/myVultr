@@ -37,7 +37,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="launch1242x2208.png" translatesAutoresizingMaskIntoConstraints="NO" id="qDk-DH-k5g">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="flower.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qDk-DH-k5g">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="API Key" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iDd-dI-foa">
@@ -88,18 +88,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qDk-DH-k5g" firstAttribute="top" secondItem="gMy-IL-s8H" secondAttribute="topMargin" id="7GK-rS-qSP"/>
                             <constraint firstItem="qPB-fn-3HD" firstAttribute="top" secondItem="qDk-DH-k5g" secondAttribute="bottom" id="8cP-RJ-JQ9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qDk-DH-k5g" secondAttribute="trailing" id="FUt-ub-MLS"/>
-                            <constraint firstAttribute="centerY" secondItem="qDk-DH-k5g" secondAttribute="centerY" id="Lc8-Ie-Nly"/>
                             <constraint firstAttribute="centerX" secondItem="tFe-yC-b7N" secondAttribute="centerX" id="Qmi-Q5-mAv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qDk-DH-k5g" secondAttribute="trailing" id="YoU-3e-cmo"/>
                             <constraint firstItem="iDd-dI-foa" firstAttribute="trailing" secondItem="gMy-IL-s8H" secondAttribute="trailingMargin" id="Z52-lF-Pei"/>
-                            <constraint firstAttribute="centerX" secondItem="qDk-DH-k5g" secondAttribute="centerX" id="cVc-bu-JdQ"/>
                             <constraint firstAttribute="centerX" secondItem="WRe-T2-ztm" secondAttribute="centerX" id="f3o-qp-Ume"/>
                             <constraint firstAttribute="centerX" secondItem="iDd-dI-foa" secondAttribute="centerX" id="glO-h2-lXM"/>
+                            <constraint firstItem="qDk-DH-k5g" firstAttribute="leading" secondItem="gMy-IL-s8H" secondAttribute="leadingMargin" id="mup-N8-gQa"/>
+                            <constraint firstItem="qDk-DH-k5g" firstAttribute="top" secondItem="gMy-IL-s8H" secondAttribute="topMargin" id="o8h-UB-IaB"/>
                             <constraint firstAttribute="centerX" secondItem="ACE-tU-vpX" secondAttribute="centerX" id="pNV-d3-FIj"/>
                             <constraint firstAttribute="centerX" secondItem="jdy-q0-i2e" secondAttribute="centerX" id="tQM-NK-jf1"/>
-                            <constraint firstItem="qDk-DH-k5g" firstAttribute="leading" secondItem="gMy-IL-s8H" secondAttribute="leadingMargin" id="xfo-q9-k5s"/>
                         </constraints>
                     </view>
                     <connections>
@@ -631,8 +629,8 @@ Vultr API: https://www.vultr.com/api/</string>
         </scene>
     </scenes>
     <resources>
+        <image name="flower.jpg" width="1024" height="1024"/>
         <image name="icon_270.png" width="30" height="30"/>
         <image name="icon_273.png" width="30" height="30"/>
-        <image name="launch1242x2208.png" width="1242" height="2208"/>
     </resources>
 </document>
