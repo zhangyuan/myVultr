@@ -3,6 +3,7 @@
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
+
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
       "filename" : "launch640x960.png",
