@@ -33,7 +33,10 @@
     
     self.apiKeyTableViewCell.detailTextLabel.text = [NSString stringWithFormat:@"%@*****", prefix];
     
-    self.versionTableViewCell.detailTextLabel.text = MY_VULTR_VERSION;
+    
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    
+    self.versionTableViewCell.detailTextLabel.text = version;
     
     UIView *v = [[UIView alloc] initWithFrame:CGRectZero];
     [self.tableView setTableFooterView:v];
